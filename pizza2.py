@@ -9,7 +9,7 @@ def solv(nos, smax, top,res=[],pi=[],n=0,d=-1):
         n = nos[i]
         d+=1
         rm = nos[i+1:]
-        yield from subset_sum(rm, smax,top, res + [n],pi+[d],n,d) 
+        yield from solv(rm, smax,top, res + [n],pi+[d],n,d) 
 
 
 if __name__ == "__main__":
