@@ -1,4 +1,4 @@
-def subset_sum(nos, smax, top,res=[],pi=[],n=0,d=-1):
+def solv(nos, smax, top,res=[],pi=[],n=0,d=-1):
     s = sum(res)
     if s <= smax and s > n:
         n = s
@@ -15,6 +15,6 @@ def subset_sum(nos, smax, top,res=[],pi=[],n=0,d=-1):
 if __name__ == "__main__":
     k , t = list(map(int,input().split()))
     lis = list(map(int,input().split()))
-    p = max(list(subset_sum(lis,k,lis)),key=lambda x:x[0])
+    p = max(list(solv(lis,k,lis)),key=lambda x:x[0])
     print(len(p[1]))
     print(" ".join(map(str,p[1])))
